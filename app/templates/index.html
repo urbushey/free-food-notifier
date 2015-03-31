@@ -9,7 +9,7 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="static/css/styles.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,32 +27,32 @@
         <h2>Slack Notifier</h2>
 
         <div class="row">
-
+        <form class="form" action="/_post_slack" method="post" role="form">
             <div class="btn-group" data-toggle="buttons">
                 <label class="btn btn-default active">
-                    <input type="radio" value="0" name="radioLocation"/> 4th Fl Cafe
+                    <input type="radio" value="4th Fl Cafe" name="radioLocation"/> 4th Fl Cafe
                 </label>
                 <label class="btn btn-default">
-                    <input type="radio" value="1" name="radioLocation"/> 2nd Fl Kitchen West
+                    <input type="radio" value="2nd Fl Kitchen West" name="radioLocation"/> 2nd Fl Kitchen West
                 </label>
                 <label class="btn btn-default">
-                    <input type="radio" value="2" name="radioLocation"/> 2nd Fl Cafe
+                    <input type="radio" value="2nd Fl Cafe" name="radioLocation"/> 2nd Fl Cafe
                 </label>
             </div>
-
+          </form>
         </div>
 
           <p><div>Post as user:
             <div class="input-group">
               <span class="input-group-addon" id="basic-addon1">@</span>
-                <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" id="input-username">
+                <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" id="input-username" name="username">
             </div>
           </div></p>
 
           <p><div>Post in channel:
             <div class="input-group">
               <span class="input-group-addon" id="basic-addon1">#</span>
-                <input type="text" class="form-control" placeholder="Channel" aria-describedby="basic-addon1" aria-label="channel" id="input-channel">
+                <input type="text" class="form-control" placeholder="Channel" aria-describedby="basic-addon1" aria-label="channel" id="input-channel" name="channel">
             </div>
           </div></p>
 
@@ -66,6 +66,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <!-- app -->
-    <script src="js/app.js"></script>
+    <script src="static/js/app.js"></script>
   </body>
 </html>
